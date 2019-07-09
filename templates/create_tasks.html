@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block content %}
+<form method="POST">
+    <div class="form-group">
+        <label>Task Name</label>
+        <input type="text" class="form-control" name="task_name" placeholder="Enter Task name">
+    </div>
+    <div class="form-group">
+        <label>Description</label>
+        <textarea class="form-control" name="task_description" rows="3"></textarea>
+    </div>
+        <div class="form-group">
+        <label>Points</label>
+        <input type="number" class="form-control" name="points" placeholder="Enter Points">
+    </div>
+    <button type="submit" class="btn btn-primary">Add Task</button>
+</form>
+{% endblock %}

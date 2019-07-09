@@ -1,0 +1,20 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h3>{{task.task_id}}. {{ task.task_name }}</h3>
+<p>{{ task.task_description }}</p>
+<p>{{ task.points }}</p>
+<p>{{task.flag}}</p>
+<form method="POST">
+    <div class="form-group">
+        <label>Flag</label>
+        {% if answer %}
+        <p>Correct</p>
+        {% endif %}
+        {% if not answer %}
+        <input type="text" class="form-control" name="flag" placeholder="Enter Flag">
+        {% endif %}
+    </div>
+    <button type="submit" class="btn btn-primary">Add Task</button>
+</form>
+{% endblock %}

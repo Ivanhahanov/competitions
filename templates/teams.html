@@ -1,0 +1,7 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for team in teams %}
+<p>{{ team.team_name }} {{ team.points }}</p>
+{% endfor %}
+{% endblock %}

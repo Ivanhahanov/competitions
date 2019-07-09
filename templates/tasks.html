@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+
+{% block content %}
+{% for task in tasks %}
+<h3><a href="{{ url_for('show_tasks',task_id=task._id) }}">{{task.task_id}}. {{ task.task_name }}</a></h3>
+<p>{{ task.task_description }}</p>
+<p>{{ task.points }}</p>
+<p>{{task.flag}}</p>
+{% endfor %}
+{% endblock %}
